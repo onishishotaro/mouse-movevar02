@@ -1,0 +1,117 @@
+@charset "UTF-8";
+.flx {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flx-btw {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flx-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flx-wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.al-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+a {
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+a:hover {
+  opacity: 0, 8;
+}
+
+.btn {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  cursor: none;
+}
+
+.pararaxArea {
+  position: relative;
+  height: 800px;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.pararaxArea .pararaxItem {
+  position: absolute;
+  width: 110vw;
+  height: 800px;
+  z-index: -1;
+  background: url(../img/pexels-miriam-espacio-110854.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-transition: -webkit-transform 0.6s ease-out 0.008s;
+  transition: -webkit-transform 0.6s ease-out 0.008s;
+  transition: transform 0.6s ease-out 0.008s;
+  transition: transform 0.6s ease-out 0.008s, -webkit-transform 0.6s ease-out 0.008s;
+}
+
+.img01,
+.img02 {
+  width: 300px;
+  height: auto;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.6s ease-out 0.008s;
+  transition: -webkit-transform 0.6s ease-out 0.008s;
+  transition: transform 0.6s ease-out 0.008s;
+  transition: transform 0.6s ease-out 0.008s, -webkit-transform 0.6s ease-out 0.008s;
+}
+.img01 img,
+.img02 img {
+  width: 100%;
+}
+
+/*独自のマウスカーソルを作成*/
+.cursor {
+  position: fixed;
+  top: -5px;
+  left: -5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.7);
+  z-index: 1000;
+  -webkit-transition: width 0.5s, height 0.5s, top 0.5s, left 0.5s;
+  transition: width 0.5s, height 0.5s, top 0.5s, left 0.5s;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  pointer-events: none;
+}
+
+/*aタグにホバーした時に見た目変化*/
+.cursor.cursor--hover {
+  top: -20px;
+  left: -20px;
+  width: 40px;
+  height: 40px;
+  background: rgba(205, 114, 113, 0.5);
+}

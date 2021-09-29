@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+// 設定用
+@import "scss/setting";
+body {
+  cursor: none;
+}
+
+.pararaxArea {
+  position: relative;
+  height: 800px;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .pararaxItem {
+    position: absolute;
+    width: 110vw;
+    height: 800px;
+    z-index: -1;
+
+    background: url(../img/pexels-miriam-espacio-110854.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s ease-out 0.008s;
+  }
+}
+.img01,
+.img02 {
+  width: 300px;
+  height: auto;
+  position: absolute;
+  transition: transform 0.6s ease-out 0.008s;
+  img {
+    width: 100%;
+  }
+}
+
+/*独自のマウスカーソルを作成*/
+.cursor {
+  position: fixed;
+  top: -5px;
+  left: -5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(#fff, 0.7);
+  z-index: 1000;
+  transition: width 0.5s, height 0.5s, top 0.5s, left 0.5s;
+  transform: translate(0, 0);
+  pointer-events: none;
+}
+
+/*aタグにホバーした時に見た目変化*/
+.cursor.cursor--hover {
+  top: -20px;
+  left: -20px;
+  width: 40px;
+  height: 40px;
+  background: rgba(205, 114, 113, 0.5);
+}
